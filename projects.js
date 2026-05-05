@@ -23,49 +23,90 @@
  */
 
 const PROJECTS = [
-
-  {
-    title:         "Aether Chronicles",
-    badge:         "2D RPG",          // text on the thumbnail badge
-    icon:          "🗡️",             // emoji shown when no image is set
-    image:         null,              // e.g. "images/aether.jpg"
-    thumbGradient: 1,                 // 1–6 built-in dark gradients
-    tags:          ["Unity 2D", "C#", "Pixel Art", "ProcGen"],
-    description:   "A pixel-art action RPG featuring procedural dungeons, a custom lighting engine, and a rich narrative woven into the environment.",
-    links: {
-      code:    "https://github.com/",  // (optional) GitHub repo
-      android: null,                   // (optional) Google Play URL
-      ios:     null,                   // (optional) App Store URL
-    }
-  },
-
-  {
-    title:         "Void Walker",
-    badge:         "FPS",
-    icon:          "🔫",
-    image:         null,
-    thumbGradient: 2,
-    tags:          ["UE5", "Blueprints", "C++", "Multiplayer"],
-    description:   "High-octane movement shooter built in Unreal Engine 5. Features advanced AI behaviors and Niagara particle systems.",
-    links: {
-      code:    "https://github.com/",
-      android: null,
-      ios:     null,
-    }
-  },
-
-  {
-    title:         "Neon Link",
-    badge:         "Puzzle",
-    icon:          "🔮",
-    image:         null,
+    {
+        title:         "Epic Blast 3D",
+        badge:         "2D Puzzle",
+        icon:          null,
+        image:          "images/projects/EpicBlast_Icon.png",
+        thumbGradient: 3,
+        tags:          ["Unity", "C#", "ScriptableObjects", "BrainCloud"],
+        description:   "Vibrant match-and-blast puzzler with chain reactions and level-based challenges.",
+        links: {
+        code:    null,
+        android: "https://play.google.com/store/apps/details?id=com.RotabGames.EpicBlast3D",
+        ios:     "https://apps.apple.com/jm/app/epic-blast-3d-toy-match-games/id6473456080",
+        }
+    },
+    {
+        title:         "Ducks Or Tails",
+        badge:         "Idle Clicker",
+        icon:          null,
+        image:          "images/projects/Dots_Icon.png",
+        thumbGradient: 3,
+        tags:          ["Unity", "C#", "Game Design", "Economy Systems", "Progression Design"],
+        description:   "Vibrant idle clicker with duck-themed progression and prestige mechanics.",
+        links: {
+        code:    null,
+        android: "https://play.google.com/store/apps/details?id=com.cryptyd.dcks&hl=en",
+        ios:     "https://apps.apple.com/us/app/duck-or-tails/id6757973350",
+        }
+    },
+    {
+    title:         "Spiro Blast",
+    badge:         "Hybrid Puzzle",          // text on the thumbnail badge
+    icon:          null,
+    image:          "images/projects/SpiroBlast_Icon.png",
     thumbGradient: 3,
-    tags:          ["React", "Three.js", "WebGL", "Minimalist"],
-    description:   "Zen puzzle game about connecting nodes in a digital space. Built with WebGL and Three.js for browser-based play.",
+    tags:          ["Unity 2D", "Splines", "Spine", "Game Design" , "Game Mathematics"],
+    description:   "Arcade-style action puzzle built around spiral trajectories and progressively tighter timing challenges.",
     links: {
-      code:    "https://github.com/",
-      android: null,
+      code:    null,
+      android: "https://play.google.com/store/apps/details?id=com.RotabGames.SpiroBlast",
       ios:     null,
+    }
+  },
+  {
+    title:         "Color Block Roll",
+    badge:         "3D Puzzle",          // text on the thumbnail badge
+    icon:          "🗡️",             // emoji shown when no image is set
+    image:         "images/projects/CBR_Icon.png",              // e.g. "images/aether.jpg"
+    thumbGradient: 1,                 // 1–6 built-in dark gradients
+    tags:          ["Unity 3D", "RayCasting", "Shaders", "Quaternions"],
+    description:   "3D block-rotation puzzle: rotate and reorient shapes to pass through fitting gates emphasizing on spatial awareness.",
+    links: {
+      code:    null,  // (optional) GitHub repo
+      android: "https://play.google.com/store/apps/details?id=com.RotabGames.ColorBlockRoll",                   // (optional) Google Play URL
+      ios:     "https://apps.apple.com/eg/app/color-block-roll/id6745810312",                   // (optional) App Store URL
+    }
+  },
+
+  {
+    title:         "CSI: Cats Survival Inc",
+    badge:         "Idle RPG",
+    icon:          null,
+    image:          "images/projects/CSI_Icon.png",
+    thumbGradient: 3,
+    tags:          ["Unity 2D", "C#", "Timeline", "File Encryption" , "ScriptableObjects"],
+    description:   "Top-down survivor action with scalable equipment and stat progression.",
+    links: {
+      code:    null,
+      android: "https://play.google.com/store/apps/details?id=com.RotabGames.CatsSurvival",
+      ios:     "https://apps.apple.com/jm/app/okicsi-cats-survival-inc/id6748838842",
+    }
+  },
+
+  {
+    title:         "Epic Blast 3D",
+    badge:         "2D Puzzle",
+    icon:          null,
+    image:          "images/projects/EpicBlast_Icon.png",
+    thumbGradient: 3,
+    tags:          ["Unity", "C#", "ScriptableObjects", "BrainCloud"],
+    description:   "Vibrant match-and-blast puzzler with chain reactions and level-based challenges.",
+    links: {
+      code:    null,
+      android: "https://play.google.com/store/apps/details?id=com.RotabGames.EpicBlast3D",
+      ios:     "https://apps.apple.com/jm/app/epic-blast-3d-toy-match-games/id6473456080",
     }
   },
 

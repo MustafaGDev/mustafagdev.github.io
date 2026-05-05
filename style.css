@@ -320,11 +320,15 @@ section { padding: 6rem 4rem; max-width: 1280px; margin: 0 auto; }
 }
 
 .game-body { padding: 1.5rem; }
+.game-title-row {
+  display: flex; align-items: center;
+  justify-content: space-between; gap: 0.75rem;
+  margin-bottom: 0.75rem;
+}
 .game-title {
   font-family: 'Rajdhani', sans-serif;
   font-size: 1.1rem; font-weight: 700;
   letter-spacing: 2px; text-transform: uppercase;
-  margin-bottom: 0.75rem;
 }
 .game-tags { display: flex; gap: 0.4rem; flex-wrap: wrap; margin-bottom: 1rem; }
 .tag {

@@ -53,12 +53,12 @@ function renderProjects() {
     <div class="game-card">
       <div class="game-thumb ${thumbClass}">
         ${thumbContent}
-        <div class="game-overlay">
-          ${p.badge ? `<span class="game-badge">${escHtml(p.badge)}</span>` : ''}
-        </div>
       </div>
       <div class="game-body">
-        <div class="game-title">${escHtml(p.title)}</div>
+        <div class="game-title-row">
+          <div class="game-title">${escHtml(p.title)}</div>
+          ${p.badge ? `<span class="game-badge">${escHtml(p.badge)}</span>` : ''}
+        </div>
         ${tags ? `<div class="game-tags">${tags}</div>` : ''}
         <p class="game-desc">${escHtml(p.description)}</p>
         ${linkHTML ? `<div class="game-links">${linkHTML}</div>` : ''}
@@ -137,21 +137,42 @@ document.addEventListener('DOMContentLoaded', () => {
 
       if (!valid) return;
 
-      // Simulate sending (replace with real fetch/formspree later)
       submitBtn.textContent = 'Sending…';
       submitBtn.disabled = true;
 
-      setTimeout(() => {
-        submitBtn.textContent = 'Message Sent ✓';
-        submitBtn.classList.add('success');
-        form.reset();
+      const data = {
+        access_key: '4711b831-79b0-4daf-a99d-439010036cf4',
+        name:    form.querySelector('#name').value.trim(),
+        email:   form.querySelector('#email').value.trim(),
+        subject: form.querySelector('#subject').value.trim(),
+        message: form.querySelector('#message').value.trim(),
+      };
 
-        setTimeout(() => {
-          submitBtn.textContent = 'Send Message ✈';
-          submitBtn.classList.remove('success');
+      fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+        body: JSON.stringify(data),
+      })
+        .then(res => res.json())
+        .then(res => {
+          if (res.success) {
+            submitBtn.textContent = 'Message Sent ✓';
+            submitBtn.classList.add('success');
+            form.reset();
+            setTimeout(() => {
+              submitBtn.textContent = 'Send Message ✈';
+              submitBtn.classList.remove('success');
+              submitBtn.disabled = false;
+            }, 3000);
+          } else {
+            submitBtn.textContent = 'Failed — Try Again';
+            submitBtn.disabled = false;
+          }
+        })
+        .catch(() => {
+          submitBtn.textContent = 'Failed — Try Again';
           submitBtn.disabled = false;
-        }, 3000);
-      }, 1000);
+        });
     });
 
     // Clear validation state on input
