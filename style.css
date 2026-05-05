@@ -478,7 +478,19 @@ section { padding: 6rem 4rem; max-width: 1280px; margin: 0 auto; }
   padding: 0.85rem 1.2rem;
   background: var(--card); border: 1px solid var(--border);
   clip-path: polygon(0 0, calc(100% - 10px) 0, 100% 10px, 100% 100%, 0 100%);
+  cursor: pointer; transition: border-color 0.2s;
 }
+.contact-item:hover { border-color: rgba(0,245,212,0.35); }
+.contact-item.copied { border-color: var(--cyan); }
+
+.copy-hint {
+  margin-left: auto; flex-shrink: 0;
+  font-size: 0.65rem; letter-spacing: 1.5px; text-transform: uppercase;
+  font-weight: 700; color: var(--muted);
+  transition: color 0.2s;
+}
+.contact-item:hover .copy-hint { color: var(--cyan); }
+.contact-item.copied .copy-hint { color: var(--cyan); }
 .contact-item-icon {
   width: 32px; height: 32px;
   background: rgba(0,245,212,0.08);

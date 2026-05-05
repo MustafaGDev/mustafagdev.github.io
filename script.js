@@ -107,6 +107,22 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  /* ---- Copy to clipboard on contact items ---- */
+  document.querySelectorAll('.contact-item[data-copy]').forEach(item => {
+    item.addEventListener('click', () => {
+      const text = item.getAttribute('data-copy');
+      navigator.clipboard.writeText(text).then(() => {
+        const hint = item.querySelector('.copy-hint');
+        hint.textContent = 'Copied!';
+        item.classList.add('copied');
+        setTimeout(() => {
+          hint.textContent = 'Copy';
+          item.classList.remove('copied');
+        }, 2000);
+      });
+    });
+  });
+
   /* ---- Hire Me button smooth scroll ---- */
   const hireMeBtn = document.getElementById('hire-me-btn');
   if (hireMeBtn) {

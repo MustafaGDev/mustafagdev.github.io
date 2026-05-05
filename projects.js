@@ -24,17 +24,17 @@
 
 const PROJECTS = [
     {
-        title:         "Epic Blast 3D",
-        badge:         "2D Puzzle",
+        title:         "Crowd Flow",
+        badge:         "3D Puzzle",
         icon:          null,
-        image:          "images/projects/EpicBlast_Icon.png",
+        image:          "images/projects/CrowdFlow_Icon.png",
         thumbGradient: 3,
-        tags:          ["Unity", "C#", "ScriptableObjects", "BrainCloud"],
-        description:   "Vibrant match-and-blast puzzler with chain reactions and level-based challenges.",
+        tags:          ["Performance Optimization", "C#", "Tilemaps", "Pathfinding", "Game Design"],
+        description:   "Help Thousands of People ride their color based buses in this color match level-based challenges.",
         links: {
         code:    null,
-        android: "https://play.google.com/store/apps/details?id=com.RotabGames.EpicBlast3D",
-        ios:     "https://apps.apple.com/jm/app/epic-blast-3d-toy-match-games/id6473456080",
+        android: "https://play.google.com/store/search?q=crowd%20flow&c=apps",
+        ios:     null,
         }
     },
     {
